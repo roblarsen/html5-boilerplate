@@ -10,10 +10,16 @@ const dirs = pkg['h5bp-configs'].directories;
 const expectedFilesInArchiveDir = [`${pkg.name}_v${pkg.version}.zip`];
 
 const expectedFilesInDistDir = [
+  '.github/',
+  '.github/copilot-instructions.md',
+
   '.editorconfig',
   '.gitattributes',
   '.gitignore',
   '404.html',
+  'AGENTS.md',
+  'CLAUDE.md',
+  'GEMINI.md',
   'package.json',
 
   'webpack.common.js',

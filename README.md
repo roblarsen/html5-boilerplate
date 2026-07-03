@@ -106,6 +106,18 @@ documentation is bundled with the project which makes it available for offline
 reading and provides a useful starting point for any documentation you want to
 write about your project.
 
+## AI Guidance Templates
+
+The starter includes AI/agent guidance templates in the shipped project so you
+can adapt them to your workflow:
+
+- [AGENTS.md](src/AGENTS.md)
+- [CLAUDE.md](src/CLAUDE.md)
+- [GEMINI.md](src/GEMINI.md)
+- [.github/copilot-instructions.md](src/.github/copilot-instructions.md)
+
+These files are authored in `src/` and included in `dist/` during build.
+
 ## Contributing
 
 Hundreds of developers have helped to make the HTML5 Boilerplate. Anyone is

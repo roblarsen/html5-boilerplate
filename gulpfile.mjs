@@ -50,12 +50,17 @@ gulp.task('archive:zip', (done) => {
 
   files.forEach((file) => {
     const filePath = path.resolve(dirs.dist, file);
+    const fileStat = fs.statSync(filePath);
+
+    if (!fileStat.isFile()) {
+      return;
+    }
 
     // `zip.bulk` does not maintain the file
     // permissions, so we need to add files individually
     zip.append(fs.createReadStream(filePath), {
       name: file,
-      mode: fs.statSync(filePath).mode,
+      mode: fileStat.mode,
     });
   });
 
